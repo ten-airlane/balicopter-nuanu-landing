@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!--
+  Nuanu Heliport - helicopter tours & transfers
+  Rates per the white-label catalogue of 11 August 2026.
+-->
+<html lang="en" class="no-js">
+<head>
+<script>document.documentElement.className='js';</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nuanu Heliport — Helicopter Tours &amp; Transfers</title>
+<meta name="description" content="Private and shared helicopter tours and transfers from the Nuanu heliport at Nuanu, Tabanan — nine scenic routes from 10 to 100 minutes and eleven transfer routes across Bali and the islands." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#033064;
+  --navy-deep:#021F44;
+  --ink:#12233B;
+  --slate:#4A5768;
+  --slate-2:#78889B;
+  --sky:#93D4FF;
+  --sky-ink:#1E6FA8;
+  --chip:#EFEFEF;
+  --sea:#E6F3FF;
+  --bg:#FFFFFF;
+  --bg-soft:#F5F8FC;
+  --white:#FFFFFF;
+  --line:#E3E9F0;
+  --shadow-md:0 20px 50px rgba(3,48,100,.10);
+  --r:14px;
+  --r-sm:8px;
+  --maxw:1180px;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--slate);background:var(--bg);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--sans);color:var(--navy);line-height:1.16;font-weight:400;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--sky-ink);outline-offset:3px}
+
+.container{width:min(var(--maxw),88vw);margin-inline:auto}
+.section{padding:clamp(72px,9vw,128px) 0}
+.section--soft{background:var(--bg-soft)}
+.eyebrow{display:block;text-transform:uppercase;letter-spacing:.36em;font-size:.62rem;font-weight:500;color:var(--sky-ink);margin-bottom:18px}
+h2.title{font-size:clamp(1.95rem,3.7vw,3.1rem);margin-bottom:20px}
+.lead{font-size:1.02rem;color:var(--slate);max-width:62ch;font-weight:300}
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+.rule{width:36px;height:2px;background:var(--sky);margin:0 0 24px;border-radius:2px}
+.center .rule{margin-inline:auto}
+
+/* ---------- NAV ---------- */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 0;transition:background .4s ease,box-shadow .4s ease,padding .4s ease}
+header.nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.lockup{display:flex;align-items:center;min-width:0}
+.lockup img{height:34px;width:auto;transition:height .4s ease}
+.lockup .mark-dark{display:none}
+header.nav.scrolled .lockup img{height:29px}
+header.nav.scrolled .lockup .mark-light{display:none}
+header.nav.scrolled .lockup .mark-dark{display:block}
+nav.links{display:flex;gap:34px;align-items:center}
+nav.links a{font-size:.73rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);position:relative;transition:color .3s ease}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-7px;height:2px;width:0;background:var(--sky);transition:width .35s ease;border-radius:2px}
+nav.links a:hover::after{width:100%}
+header.nav.scrolled nav.links a{color:var(--slate)}
+header.nav.scrolled nav.links a:hover{color:var(--navy)}
+.nav-cta{border:1px solid rgba(255,255,255,.55);color:#fff;padding:11px 25px;font-size:.67rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;transition:all .3s ease;white-space:nowrap;border-radius:999px}
+.nav-cta:hover{background:#fff;color:var(--navy);border-color:#fff}
+header.nav.scrolled .nav-cta{border-color:var(--navy);color:var(--navy)}
+header.nav.scrolled .nav-cta:hover{background:var(--navy);color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:0}
+.burger span{width:24px;height:2px;background:#fff;transition:.3s;display:block;border-radius:2px}
+header.nav.scrolled .burger span{background:var(--navy)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:var(--navy-deep)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(2,31,68,.86) 0%,rgba(2,31,68,.56) 46%,rgba(2,31,68,.20) 100%)}
+.hero-inner{padding-top:104px;padding-bottom:56px;max-width:770px}
+.hero .kicker{text-transform:uppercase;letter-spacing:.36em;font-size:.63rem;font-weight:400;color:rgba(255,255,255,.76);margin-bottom:26px}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6.4vw,5rem);font-weight:200;line-height:1.06;margin-bottom:28px;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p.sub{max-width:52ch;font-size:1.03rem;color:rgba(255,255,255,.86);margin-bottom:40px;font-weight:300;line-height:1.8}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:11px;padding:15px 32px;font-weight:500;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;transition:all .3s ease;cursor:pointer;border:none;font-family:var(--sans);border-radius:999px}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-primary:hover{background:var(--sky);color:var(--navy-deep)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:11px;font-size:.57rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.scroll-hint .line{width:1px;height:42px;background:linear-gradient(rgba(255,255,255,.55),transparent)}
+
+/* ---------- PILL STRIP ---------- */
+.pills{background:var(--navy)}
+.pills .container{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:46px 0}
+.pill{text-align:center;padding:6px 18px;font-size:.8rem;color:rgba(255,255,255,.8);line-height:1.5;font-weight:300;text-transform:uppercase;letter-spacing:.1em}
+.pill+.pill{border-left:1px solid rgba(255,255,255,.16)}
+
+/* ---------- CANVAS ---------- */
+.canvas-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,80px);align-items:center}
+.canvas-fig{overflow:hidden;border-radius:var(--r);box-shadow:var(--shadow-md)}
+.canvas-fig img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.canvas-copy p+p{margin-top:18px}
+
+/* ---------- DEPARTURE POINT ---------- */
+.dep{display:grid;grid-template-columns:1.02fr .98fr;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:52px;box-shadow:var(--shadow-md)}
+.dep-photo{position:relative;min-height:390px;background:var(--bg-soft)}
+.dep-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dep-pin{position:absolute;z-index:2;top:18px;left:18px;background:var(--navy);color:#fff;font-size:.57rem;letter-spacing:.22em;text-transform:uppercase;padding:8px 16px;font-weight:500;border-radius:999px}
+.dep-body{padding:clamp(30px,3.4vw,52px);display:flex;flex-direction:column;justify-content:center}
+.dep-region{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--sky-ink);font-weight:500;margin-bottom:10px}
+.dep-body h3{font-size:clamp(1.5rem,2.3vw,2rem);margin-bottom:14px;font-weight:400}
+.dep-body>p{font-size:.93rem;color:var(--slate);margin-bottom:22px;font-weight:300;line-height:1.8;max-width:46ch}
+.dep-times{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.dep-times span{background:var(--sea);color:var(--navy);font-size:.68rem;padding:6px 14px;border-radius:999px}
+.dep-times b{font-weight:500}
+.dep-addr{display:flex;gap:11px;align-items:flex-start;font-size:.85rem;color:var(--slate-2);margin-bottom:22px;line-height:1.65;font-weight:300}
+.dep-addr svg{flex:none;margin-top:4px}
+.dir-link{display:inline-flex;align-items:center;gap:9px;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:var(--navy);width:fit-content;padding:13px 26px;border-radius:999px;transition:background .3s ease,gap .3s ease}
+.dir-link:hover{background:var(--sky-ink);gap:14px}
+
+/* ---------- TOURS ---------- */
+.tour{display:grid;grid-template-columns:1.04fr .96fr;align-items:stretch;border-top:1px solid var(--line)}
+.tour:first-of-type{border-top:0}
+.tour-figure{position:relative;overflow:hidden;background:var(--bg-soft);min-height:430px}
+.tour-figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.tour:hover .tour-figure img{transform:scale(1.04)}
+.tour-dur{position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.94);color:var(--navy);font-size:.66rem;font-weight:500;padding:9px 18px 9px 14px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;display:inline-flex;align-items:center;gap:8px;backdrop-filter:blur(6px)}
+.tour-dur svg{flex:none}
+.tour-body{padding:clamp(34px,4.4vw,68px);display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.tour--alt .tour-figure{order:2}
+.tour--alt .tour-body{order:1}
+.tour-num{font-size:.66rem;letter-spacing:.3em;color:var(--sky-ink);margin-bottom:14px;font-weight:500}
+.tour-body h3{font-size:clamp(1.6rem,2.5vw,2.3rem);margin-bottom:16px;font-weight:400}
+.tour-body p.desc{color:var(--slate);font-size:.95rem;line-height:1.8;margin-bottom:24px;font-weight:300;max-width:48ch}
+.hl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hl span{background:var(--sea);color:var(--navy);font-size:.68rem;font-weight:400;padding:6px 14px;border-radius:999px;letter-spacing:.02em}
+.tour-route{font-size:.76rem;color:var(--slate-2);line-height:1.9;margin-bottom:22px;padding-top:20px;border-top:1px solid var(--line);font-weight:300;max-width:50ch}
+.tour-route b{color:var(--navy);font-weight:500;display:block;font-size:.55rem;text-transform:uppercase;letter-spacing:.26em;margin-bottom:9px}
+.tour-map{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:26px;background:var(--sea);cursor:zoom-in}
+.tour-map img{width:100%;height:auto;display:block}
+.tour-prices{display:flex;flex-direction:column;gap:15px;max-width:240px}
+.tour-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--chip);border-radius:var(--r-sm);padding:20px 24px}
+.tour-price{font-size:.56rem;color:var(--slate-2);line-height:1.5;text-transform:uppercase;letter-spacing:.18em}
+.tour-price .was{display:inline-block;margin-top:8px;font-size:.78rem;color:var(--slate-2);text-decoration:line-through;letter-spacing:0;text-transform:none;font-weight:300}
+.tour-price .off{display:inline-block;background:var(--navy);color:#fff;font-size:.6rem;font-weight:500;padding:3px 9px;border-radius:5px;letter-spacing:.04em;margin-left:7px;vertical-align:2px}
+.tour-price b{display:block;color:var(--navy);font-size:1.55rem;font-weight:600;letter-spacing:-.01em;text-transform:none;margin-top:3px}
+.tour-cta{display:inline-flex;align-items:center;gap:9px;font-size:.63rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:var(--navy);white-space:nowrap;transition:background .3s ease,gap .3s ease;padding:13px 26px;border-radius:999px}
+.tour-cta:hover{background:var(--sky-ink);gap:14px}
+
+/* ---------- ZOOM ---------- */
+.zoom{position:absolute;top:10px;right:10px;z-index:2;width:32px;height:32px;padding:0;border:0;border-radius:8px;cursor:zoom-in;display:flex;align-items:center;justify-content:center;background:rgba(2,31,68,.5);backdrop-filter:blur(3px);opacity:.85;transition:opacity .18s ease,background .18s ease}
+.zoom svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.zoom:hover,.zoom:focus-visible{opacity:1;background:rgba(2,31,68,.8)}
+
+/* ---------- IMAGE BAND ---------- */
+.band{position:relative;height:clamp(220px,26vw,330px);overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,31,68,.62),rgba(2,31,68,.22))}
+.band-cap{position:absolute;inset:0;z-index:2;display:grid;place-items:center;text-align:center;color:#fff;padding:0 24px}
+.band-cap p{font-size:clamp(1.35rem,2.7vw,2.15rem);font-weight:200;line-height:1.3;max-width:22ch;color:#fff;letter-spacing:-.01em}
+
+/* ---------- TRANSFER TABLE ---------- */
+.tf-wrap{margin-top:52px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tf-scroll{overflow-x:auto}
+table.tf{width:100%;border-collapse:collapse;min-width:640px}
+table.tf th{text-align:left;font-size:.58rem;text-transform:uppercase;letter-spacing:.18em;color:#fff;background:var(--navy);font-weight:500;padding:18px 30px;white-space:nowrap}
+table.tf td{padding:17px 30px;border-bottom:1px solid var(--line);font-size:.94rem;color:var(--slate);vertical-align:middle;font-weight:300}
+table.tf tbody tr:nth-child(even){background:#FAFCFE}
+table.tf tr:last-child td{border-bottom:0}
+table.tf tbody tr{transition:background .25s ease}
+table.tf tbody tr:hover{background:var(--sea)}
+table.tf td.route{font-weight:400;color:var(--navy);font-size:1rem}
+table.tf td.route small{display:block;font-weight:300;font-size:.72rem;color:var(--slate-2);letter-spacing:.05em;margin-top:3px;text-transform:uppercase}
+table.tf td.time{color:var(--slate-2);white-space:nowrap;font-size:.9rem}
+table.tf td.rate{font-weight:500;color:var(--navy);white-space:nowrap;font-size:1.02rem}
+table.tf td.bk{padding-left:8px;white-space:nowrap}
+.tf-book{display:inline-flex;align-items:center;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);padding:9px 19px;border:1px solid var(--line);border-radius:999px;transition:background .3s ease,color .3s ease,border-color .3s ease}
+.tf-book:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* ---------- FLEET (Private Jet Villa pattern) ---------- */
+.fleet-block{margin-top:60px}
+.fleet-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,54px);align-items:center}
+.fleet-block.rev .fleet-grid{grid-template-columns:1.15fr .85fr}
+.fleet-block.rev .fleet-info{order:2}
+.fleet-block.rev .fleet-gallery{order:1}
+.fleet-info h3{font-size:clamp(1.7rem,2.8vw,2.35rem);margin-bottom:8px;font-weight:400}
+.fleet-info .reg{font-size:.76rem;letter-spacing:.09em;color:var(--sky-ink);font-weight:600;margin-bottom:24px;text-transform:uppercase}
+.spec{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
+.spec .k{display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--slate-2);font-weight:500}
+.spec .k svg{color:var(--sky-ink);flex:none}
+.spec .v{font-size:.91rem;font-weight:500;color:var(--ink);text-align:right}
+.spec-note{font-size:.73rem;color:var(--slate-2);margin-top:14px;font-style:italic;font-weight:300}
+.fleet-gallery{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fleet-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-sm)}
+
+/* ---------- CONTACT ---------- */
+.contact{position:relative;background:var(--navy-deep);color:#DCEAF8;overflow:hidden}
+.contact-grid{position:relative;z-index:2;padding:clamp(76px,9vw,128px) 0}
+.contact-left{max-width:560px}
+.contact h2{color:#fff;font-size:clamp(1.9rem,3.7vw,3rem);margin-bottom:20px;font-weight:300}
+.contact .eyebrow{color:var(--sky)}
+.contact .rule{background:var(--sky)}
+.contact .sub{color:rgba(220,234,248,.8);margin-bottom:38px;font-weight:300;max-width:50ch;font-size:1rem}
+.c-item{display:inline-flex;align-items:center;gap:15px;color:#fff;font-size:1.14rem;font-weight:400;transition:color .3s ease;width:fit-content}
+.c-item:hover{color:var(--sky)}
+.c-item .ic{width:44px;height:44px;border:1px solid rgba(220,234,248,.3);border-radius:50%;display:grid;place-items:center;flex:0 0 auto;transition:border-color .3s ease}
+.c-item:hover .ic{border-color:var(--sky)}
+.c-item small{display:block;font-size:.6rem;color:rgba(220,234,248,.55);font-weight:400;letter-spacing:.18em;text-transform:uppercase;margin-top:3px}
+.contact-right{position:absolute;top:0;right:0;width:42%;height:100%;z-index:1}
+.contact-right img{width:100%;height:100%;object-fit:cover}
+.contact-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy-deep) 0%,rgba(2,31,68,.76) 44%,rgba(2,31,68,.3) 100%)}
+.contact-brand{display:inline-flex;margin-bottom:30px}
+.contact-brand img{height:38px;width:auto}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:28px;background:rgba(2,15,34,.92);backdrop-filter:blur(4px)}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:min(1400px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb img{max-width:100%;max-height:calc(100vh - 130px);width:auto;height:auto;object-fit:contain;border-radius:10px;background:#fff}
+.lb figcaption{color:rgba(255,255,255,.85);font-size:.8rem;text-align:center;letter-spacing:.06em}
+.lb-close{position:absolute;top:18px;right:18px;width:42px;height:42px;padding:0;cursor:pointer;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .18s ease}
+.lb-close:hover{background:rgba(255,255,255,.22)}
+body.lb-open{overflow:hidden}
+
+/* ---------- FLOATING WHATSAPP ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:400;display:flex;align-items:center;height:58px;border-radius:40px;background:#25d366;color:#fff;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.52)}
+.wa-icon{flex:0 0 58px;width:58px;height:58px;display:grid;place-items:center}
+.wa-icon svg{width:27px;height:27px}
+.wa-label{white-space:nowrap;font-weight:500;font-size:.9rem;padding:0 24px 0 2px}
+
+/* ---------- REVEAL ---------- */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.1s}.js .reveal.d2{transition-delay:.2s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1000px){
+  .tour{grid-template-columns:1fr}
+  .tour--alt .tour-figure{order:0}
+  .tour--alt .tour-body{order:0}
+  .tour-figure{min-height:0;aspect-ratio:16/10}
+  .canvas-grid{grid-template-columns:1fr;gap:34px}
+  .dep{grid-template-columns:1fr}
+  .dep-photo{min-height:0;aspect-ratio:16/10}
+  .pills .container{grid-template-columns:repeat(3,1fr)}
+  .pill{padding:16px 12px}
+  .pill+.pill{border-left:none}
+  .pill:not(:nth-child(3n+1)){border-left:1px solid rgba(255,255,255,.16)}
+  .pill:nth-child(n+4){border-top:1px solid rgba(255,255,255,.16)}
+  .fleet-grid,.fleet-block.rev .fleet-grid{grid-template-columns:1fr;gap:34px}
+  .fleet-block.rev .fleet-info,.fleet-block.rev .fleet-gallery{order:0}
+  .contact-right{display:none}
+  .contact-left{max-width:none}
+}
+@media (max-width:768px){
+  nav.links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:0;max-height:0;overflow:hidden;box-shadow:var(--shadow-md);transition:max-height .4s ease}
+  nav.links.mobile-open{max-height:340px}
+  nav.links a{color:var(--slate)!important;padding:16px 26px;width:100%;border-bottom:1px solid var(--line)}
+  nav.links a::after{display:none}
+  .burger{display:flex}
+  .nav-cta{display:none}
+  .pills .container{grid-template-columns:repeat(2,1fr)}
+  .pill:not(:nth-child(3n+1)){border-left:none}
+  .pill:nth-child(even){border-left:1px solid rgba(255,255,255,.16)}
+  .pill:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}
+  .tour-figure{aspect-ratio:4/3}
+  .scroll-hint{display:none}
+  .tour-foot{flex-direction:column;align-items:stretch;gap:16px}
+  .tour-cta{justify-content:center}
+  table.tf th,table.tf td{padding-left:20px;padding-right:20px}
+  .wa-label{display:none}
+  .wa-float{right:16px;bottom:16px;height:52px}
+  .wa-icon{flex:0 0 52px;width:52px;height:52px}
+  .lb{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="lockup" aria-label="Nuanu Creative City — home">
+      <img class="mark-light" src="assets/nuanu-logo-white.png" alt="Nuanu Creative City" />
+      <img class="mark-dark" src="assets/nuanu-logo.png" alt="" aria-hidden="true" />
+    </a>
+    <nav class="links" id="links">
+      <a href="#helipad">Heliport</a>
+      <a href="#tours">Tours</a>
+      <a href="#transfers">Transfers</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20a%20helicopter%20flight.%20Could%20you%20let%20me%20know%20what%27s%20available%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book a Flight</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"><img src="assets/hero-heliport.jpg" alt="Four-seat turbine helicopter on the marked pad at the Nuanu heliport, rice fields and mountains beyond" /></div>
+  <div class="container hero-inner">
+    <p class="kicker">Departing from Nuanu Heliport, Tabanan</p>
+    <div class="rule"></div>
+    <h1>Discover the beauty<br /><em>from a new angle</em></h1>
+    <p class="sub">Nine scenic routes, from a ten-minute run down the Canggu coastline to a hundred minutes across the whole island — and eleven transfer routes that turn a morning's drive into a quarter of an hour.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#tours">Explore Tours</a>
+      <a class="btn btn-ghost" href="#fleet">Meet the Fleet</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ===== PILLS (verbatim from the catalogue cover) ===== -->
+<section class="pills">
+  <div class="container">
+    <div class="pill">Brand-new<br />helicopter fleet</div>
+    <div class="pill">International<br />safety standards</div>
+    <div class="pill">World-class<br />professional pilots</div>
+    <div class="pill">Landing options<br />at any location</div>
+    <div class="pill">Best price<br />guarantee</div>
+  </div>
+</section>
+
+<!-- ===== THE SKY IS OUR CANVAS ===== -->
+<section class="section">
+  <div class="container canvas-grid">
+    <div class="canvas-copy reveal">
+      <span class="eyebrow">Who flies you</span>
+      <h2 class="title">The Sky is Our Canvas</h2>
+      <div class="rule"></div>
+      <p class="lead">Every flight departs from one of our private helipads across Bali and the Gili Islands. Every aircraft in our fleet was delivered factory-fresh and is maintained to the highest international aviation standards. Every pilot holds the top certifications in the field.</p>
+      <p class="lead">Four turbine aircraft, one pilot and up to four guests on every one of them, and a pad ten minutes from Tanah Lot and twenty from Canggu.</p>
+    </div>
+    <figure class="canvas-fig reveal d1"><img loading="lazy" decoding="async" src="assets/hero-cover.jpg" alt="Passenger photographing the coastline through an open helicopter window" /></figure>
+  </div>
+</section>
+
+<!-- ===== DEPARTURE POINT ===== -->
+<section class="section section--soft" id="helipad" style="padding-bottom:0">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Where your journey starts</span>
+      <h2 class="title">Nuanu Heliport</h2>
+      <div class="rule"></div>
+      <p class="lead">Every tour and every transfer on this page lifts off from here and returns here.</p>
+    </div>
+
+    <div class="dep reveal d1">
+      <div class="dep-photo">
+        <span class="dep-pin">Your departure point</span>
+        <img loading="lazy" decoding="async" src="assets/fleet-r66.jpg" alt="Turbine helicopter waiting on the marked pad at the Nuanu heliport" />
+      </div>
+      <div class="dep-body">
+        <div class="dep-region">Bali &middot; Tabanan</div>
+        <h3>The pad on the west coast</h3>
+        <p>Check in, meet your pilot and walk out to the aircraft. From the pad it is minutes to the places the road takes hours to reach.</p>
+        <div class="dep-times">
+          <span><b>10 min</b> &middot; Tanah Lot</span>
+          <span><b>12 min</b> &middot; Ubud</span>
+          <span><b>15 min</b> &middot; Nusa Dua</span>
+          <span><b>25 min</b> &middot; Nusa Penida</span>
+          <span><b>40 min</b> &middot; Gili Trawangan</span>
+        </div>
+        <div class="dep-addr">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E6FA8" stroke-width="1.6" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Jalan Pantai Nyanyi, Beraban, Kediri, Tabanan 82121, Bali
+        </div>
+        <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Jalan%20Pantai%20Nyanyi%2C%20Beraban%2C%20Kediri%2C%20Tabanan%2082121%2C%20Bali">Get directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOURS ===== -->
+<section class="section section--soft" id="tours" style="padding-bottom:0">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Choose your route</span>
+      <h2 class="title">Scenic Flights</h2>
+      <div class="rule"></div>
+      <p class="lead">Nine routes from the Nuanu pad. Take a single seat on a shared flight, or take the whole aircraft — up to four seats.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--soft" style="padding-bottom:clamp(72px,9vw,128px)">
+  <div class="container" style="margin-top:56px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden">
+
+    <!-- 01 -->
+    <article class="tour reveal">
+      <div class="tour-figure">
+        <img src="assets/tour-thrill.jpg" alt="Surf breaking on the west coast, seen from above" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 01</div>
+        <h3>Helicopter Thrill Ride</h3>
+        <p class="desc">The short one, and the one everybody remembers. Straight out over the break, north along the sand to the sea temple, and back before the coffee goes cold.</p>
+        <div class="hl"><span>Nuanu</span><span>Tanah Lot</span><span>Pererenan Beach</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot Temple → Nuanu → Pererenan Beach → Berawa Beach → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-thrill.jpg" data-cap="Helicopter Thrill Ride — route map">
+          <img loading="lazy" decoding="async" src="assets/map-thrill.jpg" alt="Route map for the Helicopter Thrill Ride" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 1 990 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 6 899 000</b><span class="was">IDR 7 960 000</span><span class="off">−15%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Helicopter%20Thrill%20Ride%20%2810%20minutes%20%E2%80%94%20IDR%201%2C990%2C000%20per%20seat%20shared%2C%20or%20IDR%206%2C899%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="tour tour--alt reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-skyline.jpg" alt="Long beach and shoreline at low sun" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 02</div>
+        <h3>Canggu Skyline</h3>
+        <p class="desc">The Thrill Ride carried five minutes further south — far enough to pick up the full west-coast strand, the surf beaches giving way to the long sweep past Seminyak and down to Kuta.</p>
+        <div class="hl"><span>Helicopter Thrill Ride</span><span>Pererenan Beach</span><span>Seminyak Beach</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot Temple → Nuanu → Pererenan → Berawa → Seminyak Beach → Kuta Beach → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-skyline.jpg" data-cap="Canggu Skyline — route map">
+          <img loading="lazy" decoding="async" src="assets/map-skyline.jpg" alt="Route map for the Canggu Skyline tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 3 399 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 10 499 000</b><span class="was">IDR 13 596 000</span><span class="off">−25%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Canggu%20Skyline%20%2815%20minutes%20%E2%80%94%20IDR%203%2C399%2C000%20per%20seat%20shared%2C%20or%20IDR%2010%2C499%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="tour reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-2coast.jpg" alt="Monumental statue rising above the southern hills" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>35 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 03</div>
+        <h3>Canggu &amp; Uluwatu: A Tale of Two Coastlines</h3>
+        <p class="desc">Two entirely different coasts in one flight — the dark surf beaches north of the airport, then the white limestone cliffs of the Bukit, where the land simply stops and drops into the Indian Ocean.</p>
+        <div class="hl"><span>Above the Island of Gods</span><span>GWK</span><span>Melasti Beach</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot → Nuanu → Pererenan → Berawa → Seminyak → Kuta → Dreamland → Uluwatu Temple → Nyang-Nyang → Melasti Beach → GWK → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-2coast.jpg" data-cap="Canggu and Uluwatu: A Tale of Two Coastlines — route map">
+          <img loading="lazy" decoding="async" src="assets/map-2coast.jpg" alt="Route map for the Canggu and Uluwatu tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 6 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 22 499 000</b><span class="was">IDR 27 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Canggu%20%26%20Uluwatu%3A%20A%20Tale%20of%20Two%20Coastlines%20%2835%20minutes%20%E2%80%94%20IDR%206%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2022%2C499%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="tour tour--alt reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-volcanoes-temples.jpg" alt="Volcanic ridgeline standing above cloud" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>55 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 04</div>
+        <h3>Volcanoes and Temples</h3>
+        <p class="desc">Inland and up. The terraced valleys behind Tabanan, the crater rim at Batur with the lake sitting inside it, and Ubud's river gorges on the way back down to the coast.</p>
+        <div class="hl"><span>Batur Volcano</span><span>Jatiluwih Rice Terraces</span><span>Tanah Lot Temple</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot Temple → Jatiluwih Rice Terraces → Mt. Batur → Ubud → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-volcanoes-temples.jpg" data-cap="Volcanoes and Temples — route map">
+          <img loading="lazy" decoding="async" src="assets/map-volcanoes-temples.jpg" alt="Route map for the Volcanoes and Temples tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 10 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 34 799 000</b><span class="was">IDR 43 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Volcanoes%20and%20Temples%20%2855%20minutes%20%E2%80%94%20IDR%2010%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2034%2C799%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 -->
+    <article class="tour reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-penida.jpg" alt="Collapsed sea arch and turquoise water on a limestone coast" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>55 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 05</div>
+        <h3>Nusa Penida Sky Escape</h3>
+        <p class="desc">Straight across the strait to the cliff coast — Kelingking, Broken Beach, the manta grounds. The places that cost an hour on a boat and two on a bad road, reached in twenty minutes.</p>
+        <div class="hl"><span>Kelingking Beach</span><span>Broken Beach</span><span>Manta Point</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Devil's Tears → Broken Beach → Kelingking Beach → Manta Point → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-penida.jpg" data-cap="Nusa Penida Sky Escape — route map">
+          <img loading="lazy" decoding="async" src="assets/map-penida.jpg" alt="Route map for the Nusa Penida Sky Escape" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 10 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 34 799 000</b><span class="was">IDR 43 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Nusa%20Penida%20Sky%20Escape%20%2855%20minutes%20%E2%80%94%20IDR%2010%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2034%2C799%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06 -->
+    <article class="tour tour--alt reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-four-islands.jpg" alt="Headland and beach on the Penida cliff coast from the air" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>65 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 06</div>
+        <h3>Four Islands Perfect Tour</h3>
+        <p class="desc">The islands and the Bukit in a single loop — south past Kuta to the peninsula, out across the water to the Penida cliffs, then home along the channel with all four islands in the frame.</p>
+        <div class="hl"><span>Nusa Penida Sky Escape</span><span>GWK</span><span>Melasti Beach</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot → Nuanu → Kuta → GWK → Melasti → Waterblow → Manta Point → Kelingking → Broken Beach → Devil's Tears → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-four-islands.jpg" data-cap="Four Islands Perfect Tour — route map">
+          <img loading="lazy" decoding="async" src="assets/map-four-islands.jpg" alt="Route map for the Four Islands Perfect Tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 12 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 41 999 000</b><span class="was">IDR 51 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Four%20Islands%20Perfect%20Tour%20%2865%20minutes%20%E2%80%94%20IDR%2012%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2041%2C999%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 07 -->
+    <article class="tour reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-volcanoes-islands.jpg" alt="Island channel with a volcano standing on the horizon" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>85 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 07</div>
+        <h3>Volcanoes and Islands</h3>
+        <p class="desc">Both volcanoes and the whole island group in one flight. Batur and Agung close aboard, down the east coast past Manggis, then out over the strait to Penida and back along the south.</p>
+        <div class="hl"><span>Nusa Penida</span><span>Batur Volcano</span><span>Agung Volcano</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Ubud → Mt. Batur → Mt. Agung → Manggis → Devil's Tears → Broken Beach → Kelingking → Manta Point → Kuta → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-volcanoes-islands.jpg" data-cap="Volcanoes and Islands — route map">
+          <img loading="lazy" decoding="async" src="assets/map-volcanoes-islands.jpg" alt="Route map for the Volcanoes and Islands tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 16 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 54 999 000</b><span class="was">IDR 67 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Volcanoes%20and%20Islands%20%2885%20minutes%20%E2%80%94%20IDR%2016%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2054%2C999%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 08 -->
+    <article class="tour tour--alt reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-all-bali.jpg" alt="Rice fields and palm canopy with volcanoes beyond at dawn" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>100 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 08</div>
+        <h3>All Bali Tour</h3>
+        <p class="desc">The whole island in one circuit. West coast, highlands, both volcanoes, the east shore, the Penida cliffs and the Bukit — every landscape Bali has, in the order the island arranges them.</p>
+        <div class="hl"><span>Nusa Penida</span><span>Volcanoes</span><span>Canggu &amp; Uluwatu Coastlines</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot → Jatiluwih → Mt. Batur → Mt. Agung → Manggis → Devil's Tears → Broken Beach → Kelingking → Manta Point → Waterblow → GWK → Melasti → Uluwatu → Kuta → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-all-bali.jpg" data-cap="All Bali Tour — route map">
+          <img loading="lazy" decoding="async" src="assets/map-all-bali.jpg" alt="Route map for the All Bali Tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 20 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 64 999 000</b><span class="was">IDR 83 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20All%20Bali%20Tour%20%28100%20minutes%20%E2%80%94%20IDR%2020%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2064%2C999%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 09 -->
+    <article class="tour reveal">
+      <div class="tour-figure">
+        <img loading="lazy" decoding="async" src="assets/tour-ijen.jpg" alt="Turquoise crater lake ringed by steaming rock" />
+        <span class="tour-dur"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#033064" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>100 minutes</span>
+      </div>
+      <div class="tour-body">
+        <div class="tour-num">Route 09</div>
+        <h3>Ijen Tour</h3>
+        <p class="desc">West along the Tabanan coast, over the reef at Menjangan, then across the strait into East Java for the acid crater lake — the trip that otherwise costs a night away and a two-in-the-morning climb.</p>
+        <div class="hl"><span>Tanah Lot Temple</span><span>Menjangan Island</span><span>Ijen Crater</span></div>
+        <div class="tour-route"><b>Route</b>Nuanu Heliport → Tanah Lot Temple → Pasut Beach → Menjangan Island → Ijen Crater → Nuanu Heliport</div>
+        <div class="tour-map zoomable" data-zoom="assets/map-ijen.jpg" data-cap="Ijen Tour — route map">
+          <img loading="lazy" decoding="async" src="assets/map-ijen.jpg" alt="Route map for the Ijen Tour" />
+          <button class="zoom" type="button" aria-label="Enlarge route map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H4a1 1 0 0 0-1 1v5M15 3h5a1 1 0 0 1 1 1v5M9 21H4a1 1 0 0 1-1-1v-5M15 21h5a1 1 0 0 0 1-1v-5"/></svg></button>
+        </div>
+        <div class="tour-foot">
+          <div class="tour-prices">
+            <div class="tour-price">Shared tour · per seat<b>IDR 20 999 000</b></div>
+            <div class="tour-price">Private tour · per helicopter, up to 4 seats<b>IDR 64 999 000</b><span class="was">IDR 83 996 000</span><span class="off">−20%</span></div>
+          </div>
+          <a class="tour-cta" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20Ijen%20Tour%20%28100%20minutes%20%E2%80%94%20IDR%2020%2C999%2C000%20per%20seat%20shared%2C%20or%20IDR%2064%2C999%2C000%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Enquire</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== IMAGE BAND ===== -->
+<section class="band">
+  <img loading="lazy" decoding="async" src="assets/band-transfers.jpg" alt="Island coastline and reef flats seen from altitude" />
+  <div class="band-cap"><p>A morning's drive, flown in a quarter of an hour.</p></div>
+</section>
+
+<!-- ===== TRANSFERS ===== -->
+<section class="section" id="transfers">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Point to point</span>
+      <h2 class="title">Signature Helicopter Transfers</h2>
+      <div class="rule"></div>
+      <p class="lead">One-way private transfers from Nuanu Heliport. Rates are per helicopter for up to four guests, and the time shown is on-board flight time.</p>
+    </div>
+
+    <div class="tf-wrap reveal d1">
+      <div class="tf-scroll">
+        <table class="tf">
+          <thead>
+            <tr>
+              <th scope="col">Route</th>
+              <th scope="col">On-board flight time</th>
+              <th scope="col">Private transfer</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="route">Ngurah Rai Airport</td>
+              <td class="time">10 mins</td>
+              <td class="rate">IDR 54,099,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Ngurah%20Rai%20Airport%20%2810%20mins%20%E2%80%94%20IDR%2054%2C099%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Ngurah Rai Airport<small>via Benoa Helipad</small></td>
+              <td class="time">10 mins</td>
+              <td class="rate">IDR 20,499,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Ngurah%20Rai%20Airport%20%28via%20Benoa%20Helipad%29%20%2810%20mins%20%E2%80%94%20IDR%2020%2C499%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Ubud<small>Kuber Adventure</small></td>
+              <td class="time">12 mins</td>
+              <td class="rate">IDR 21,799,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Ubud%20%28Kuber%20Adventure%29%20%2812%20mins%20%E2%80%94%20IDR%2021%2C799%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Ubud, Tegallalang Area<small>Hiliwatu Resort</small></td>
+              <td class="time">12 mins</td>
+              <td class="rate">IDR 22,999,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Ubud%2C%20Tegallalang%20Area%20%28Hiliwatu%20Resort%29%20%2812%20mins%20%E2%80%94%20IDR%2022%2C999%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Jatiluwih Area<small>Jatiluwih Ecofarm</small></td>
+              <td class="time">10 mins</td>
+              <td class="rate">IDR 20,299,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Jatiluwih%20Area%20%28Jatiluwih%20Ecofarm%29%20%2810%20mins%20%E2%80%94%20IDR%2020%2C299%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Nusa Dua<small>JAG Helipad</small></td>
+              <td class="time">15 mins</td>
+              <td class="rate">IDR 18,399,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Nusa%20Dua%20%28JAG%20Helipad%29%20%2815%20mins%20%E2%80%94%20IDR%2018%2C399%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Gili Trawangan</td>
+              <td class="time">40 mins</td>
+              <td class="rate">IDR 54,499,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Gili%20Trawangan%20%2840%20mins%20%E2%80%94%20IDR%2054%2C499%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Nusa Penida East<small>Semaya</small></td>
+              <td class="time">30 mins</td>
+              <td class="rate">IDR 39,199,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Nusa%20Penida%20East%20%28Semaya%29%20%2830%20mins%20%E2%80%94%20IDR%2039%2C199%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Nusa Penida West<small>Kelingking</small></td>
+              <td class="time">25 mins</td>
+              <td class="rate">IDR 36,499,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Nusa%20Penida%20West%20%28Kelingking%29%20%2825%20mins%20%E2%80%94%20IDR%2036%2C499%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Nusa Lembongan</td>
+              <td class="time">22 mins</td>
+              <td class="rate">IDR 33,399,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Nusa%20Lembongan%20%2822%20mins%20%E2%80%94%20IDR%2033%2C399%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+            <tr>
+              <td class="route">Menjangan Area</td>
+              <td class="time">35 mins</td>
+              <td class="rate">IDR 53,399,000</td>
+              <td class="bk"><a class="tf-book" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20the%20helicopter%20transfer%20to%20Menjangan%20Area%20%2835%20mins%20%E2%80%94%20IDR%2053%2C399%2C000%2C%20private%20charter%29.%20Could%20you%20let%20me%20know%20the%20next%20available%20times%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">Book</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLEET ===== -->
+<section class="section section--soft" id="fleet">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">The Fleet</span>
+      <div class="rule"></div>
+      <h2 class="title">The Right Aircraft for Every Journey</h2>
+      <p class="lead">Two types, four aircraft, every one delivered factory-fresh and maintained to the highest international aviation standards. Both carry one pilot and up to four guests.</p>
+    </div>
+
+    <div class="fleet-block reveal">
+      <div class="fleet-grid">
+        <div class="fleet-info">
+          <h3>Robinson 66</h3>
+          <div class="reg">Three airframes &middot; delivered 2022, 2023 and 2025</div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Cruise Speed</span><span class="v">Up to 110 kn (204 km/h)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Max Range</span><span class="v">&asymp; 350 nm (650 km)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="7" r="3"/><path d="M2 21a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 21a5 5 0 0 1 6 0"/></svg>Capacity</span><span class="v">1 pilot + up to 4 pax</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Baggage</span><span class="v">18 ft&sup3; &middot; 300 lb (136 kg)</span></div>
+          <p class="spec-note">*Subject to configuration and payload.</p>
+        </div>
+        <div class="fleet-gallery">
+          <img loading="lazy" decoding="async" src="assets/r66-1.jpg" alt="Four-seat turbine helicopter in cruise above a volcanic ridge" />
+          <img loading="lazy" decoding="async" src="assets/r66-2.jpg" alt="The helicopter waiting on the marked pad" />
+          <img loading="lazy" decoding="async" src="assets/r66-3.jpg" alt="The helicopter on a grass landing area with guests aboard" />
+          <img loading="lazy" decoding="async" src="assets/r66-4.jpg" alt="Noise-cancelling aviation headset in the cabin" />
+        </div>
+      </div>
+    </div>
+
+    <div class="fleet-block rev reveal">
+      <div class="fleet-grid">
+        <div class="fleet-info">
+          <h3>Bell 505</h3>
+          <div class="reg">One airframe &middot; delivered 2024</div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Cruise Speed</span><span class="v">125 kn (231 km/h)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Max Range</span><span class="v">306 nm (567 km)</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="7" r="3"/><path d="M2 21a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 21a5 5 0 0 1 6 0"/></svg>Capacity</span><span class="v">1 pilot + up to 4 pax</span></div>
+          <div class="spec"><span class="k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Baggage</span><span class="v">288 kg</span></div>
+          <p class="spec-note">*Subject to configuration and payload.</p>
+        </div>
+        <div class="fleet-gallery">
+          <img loading="lazy" decoding="async" src="assets/bell-1.jpg" alt="Single-engine turbine helicopter on the landing pad" />
+          <img loading="lazy" decoding="async" src="assets/bell-2.jpg" alt="Cabin seating with harnesses and headsets" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="contact-right"><img loading="lazy" decoding="async" src="assets/band-closing.jpg" alt="Volcanic crater lake and steam at sunrise" /></div>
+  <div class="container contact-grid">
+    <div class="contact-left reveal">
+      <span class="contact-brand"><img src="assets/nuanu-logo-white.png" alt="Nuanu Creative City" /></span>
+      <span class="eyebrow">Reservations</span>
+      <h2>Arrange Your Flight</h2>
+      <div class="rule"></div>
+      <p class="sub">Tell us the route and the date. We will confirm the aircraft, the departure window and the weather call, and hold the slot while you decide.</p>
+      <a class="c-item" target="_blank" rel="noopener" href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20a%20helicopter%20flight.%20Could%20you%20let%20me%20know%20what%27s%20available%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg></span>
+        <span>+62 852 3594 8856<small>WhatsApp · daily</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Enlarged route map">
+  <button class="lb-close" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <figure><img id="lbImg" src="" alt="" /><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="wa-float" target="_blank" rel="noopener" aria-label="Book on WhatsApp"
+   href="https://wa.me/6285235948856?text=Hi%21%20I%27m%20at%20Nuanu%20and%20I%27d%20like%20to%20book%20a%20helicopter%20flight.%20Could%20you%20let%20me%20know%20what%27s%20available%3F%20please%20keep%20this%20line%20so%20the%20Nuanu%20guest%20rate%20is%20applied">
+  <span class="wa-icon"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg></span>
+  <span class="wa-label">Book a flight</span>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>60)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var burger=document.getElementById('burger'),links=document.getElementById('links');
+  burger.addEventListener('click',function(){
+    var open=links.classList.toggle('mobile-open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  links.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){links.classList.remove('mobile-open');burger.setAttribute('aria-expanded','false');}
+  });
+
+  var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),lbClose=document.getElementById('lbClose'),last=null;
+  function openLb(src,cap,trigger){
+    lbImg.src=src;lbImg.alt=cap||'';lbCap.textContent=cap||'';
+    lb.hidden=false;document.body.classList.add('lb-open');last=trigger||null;lbClose.focus();
+  }
+  function closeLb(){
+    lb.hidden=true;document.body.classList.remove('lb-open');lbImg.src='';
+    if(last&&last.focus){last.focus();}
+  }
+  document.querySelectorAll('.zoomable').forEach(function(el){
+    var src=el.getAttribute('data-zoom'),cap=el.getAttribute('data-cap')||'';
+    var btn=el.querySelector('.zoom');
+    el.addEventListener('click',function(){openLb(src,cap,btn);});
+    if(btn){btn.addEventListener('click',function(e){e.stopPropagation();openLb(src,cap,btn);});}
+  });
+  lbClose.addEventListener('click',closeLb);
+  lb.addEventListener('click',function(e){if(e.target===lb){closeLb();}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden){closeLb();}});
+
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
