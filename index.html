@@ -184,6 +184,22 @@ table.tf td.bk{padding-left:8px;white-space:nowrap}
 .tf-book{display:inline-flex;align-items:center;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);padding:9px 19px;border:1px solid var(--line);border-radius:999px;transition:background .3s ease,color .3s ease,border-color .3s ease}
 .tf-book:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 
+/* ---------- PICNIC ADD-ONS (series pattern, forked from work-stream 14) ---------- */
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:56px}
+.pk-card{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;border-radius:var(--r-sm);overflow:hidden}
+.pk-photo{height:200px;overflow:hidden}
+.pk-photo img{width:100%;height:100%;object-fit:cover}
+.pk-body{padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;flex:1}
+.pk-body h3{font-size:1.22rem;font-weight:400;margin-bottom:10px;letter-spacing:.03em;color:var(--navy)}
+.vip-tag{align-self:flex-start;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);background:var(--bg-soft);padding:7px 12px;margin-bottom:18px;font-weight:500}
+.pk-inc{font-size:.84rem;font-weight:300;color:var(--slate);line-height:1.7;margin-bottom:16px}
+.pk-menu{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px;padding:0}
+.pk-menu li{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--slate);background:var(--bg-soft);padding:5px 9px;white-space:nowrap;border-radius:3px}
+.price{border-top:1px solid var(--line);padding-top:20px;margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.price-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.22em;color:var(--slate-2);font-weight:500}
+.price strong{font-size:1.5rem;font-weight:300;letter-spacing:.02em;color:var(--navy)}
+.pk-note{margin-top:28px;font-size:.8rem;font-weight:300;color:var(--slate-2);text-align:center;max-width:80ch;margin-inline:auto;line-height:1.75}
+
 /* ---------- FLEET (Private Jet Villa pattern) ---------- */
 .fleet-block{margin-top:60px}
 .fleet-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,54px);align-items:center}
@@ -260,6 +276,7 @@ body.lb-open{overflow:hidden}
   .pill+.pill{border-left:none}
   .pill:not(:nth-child(3n+1)){border-left:1px solid rgba(255,255,255,.16)}
   .pill:nth-child(n+4){border-top:1px solid rgba(255,255,255,.16)}
+  .pk-grid{grid-template-columns:1fr}
   .fleet-grid,.fleet-block.rev .fleet-grid{grid-template-columns:1fr;gap:34px}
   .fleet-block.rev .fleet-info,.fleet-block.rev .fleet-gallery{order:0}
   .contact-right{display:none}
@@ -301,6 +318,7 @@ body.lb-open{overflow:hidden}
       <a href="#helipad">Heliport</a>
       <a href="#tours">Tours</a>
       <a href="#transfers">Transfers</a>
+      <a href="#picnics">Picnics</a>
       <a href="#fleet">Fleet</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -736,6 +754,51 @@ body.lb-open{overflow:hidden}
         </table>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== PICNIC ADD-ONS ===== -->
+<section class="section" id="picnics">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Picnic Package &middot; Add-on</span>
+      <div class="rule"></div>
+      <h2 class="title">Land for a Picnic</h2>
+      <p class="lead">Land where the view is. Three picnic set-ups across Bali &mdash; on the sand beneath the cliffs at Nyang Nyang, among the Jatiluwih rice terraces, or on Nusa Penida&rsquo;s east coast &mdash; each laid for two, with the helicopter waiting.</p>
+    </div>
+    <div class="pk-grid reveal">
+      <div class="pk-card">
+        <div class="pk-photo"><img src="assets/picnic-bubble.jpg" alt="Picnic set-up under white umbrellas in the Bubble Garden at Nyang Nyang Beach" loading="lazy" decoding="async" /></div>
+        <div class="pk-body">
+          <span class="vip-tag">Nyang Nyang Beach &middot; Pecatu</span>
+          <h3>Picnic at Bubble Hotel</h3>
+          <p class="pk-inc">Bubble Garden old-school picnic set-up for two &middot; helicopter landing fee and one hour of waiting time included.</p>
+          <ul class="pk-menu"><li>Sparkling, ros&eacute;, white or red wine</li><li>Champagne upgrade available</li><li>Charcuterie board</li><li>Garden salad</li><li>Seasonal fruit plate</li><li>Cupcakes &amp; hot cocoa</li></ul>
+          <div class="price"><span class="price-label">Special price &middot; for two &middot; tax &amp; service included</span><strong>IDR 20,000,000</strong></div>
+        </div>
+      </div>
+      <div class="pk-card">
+        <div class="pk-photo"><img src="assets/picnic-jatiluwih.jpg" alt="Picnic table set among the Jatiluwih rice terraces with the helicopter beyond" loading="lazy" decoding="async" /></div>
+        <div class="pk-body">
+          <span class="vip-tag">Jatiluwih &middot; Tabanan</span>
+          <h3>Picnic at Jatiluwih Eco Farm</h3>
+          <p class="pk-inc">Rice-terrace-view picnic set-up for two &middot; helicopter landing fee and one hour of waiting time included.</p>
+          <ul class="pk-menu"><li>Green salad</li><li>Creamy tomato soup</li><li>Beef steak</li><li>Chocolate brownies</li><li>Wine, water, tea or coffee</li></ul>
+          <div class="price"><span class="price-label">Special price &middot; for two &middot; tax &amp; service included</span><strong>IDR 16,000,000</strong></div>
+        </div>
+      </div>
+      <div class="pk-card">
+        <div class="pk-photo"><img src="assets/picnic-semaya.jpg" alt="Seaside picnic spread on the east coast of Nusa Penida" loading="lazy" decoding="async" /></div>
+        <div class="pk-body">
+          <span class="vip-tag">Suana &middot; Nusa Penida</span>
+          <h3>Picnic at Semaya Resort</h3>
+          <p class="pk-inc">Beach-view picnic set-up for two &middot; helicopter landing fee and one hour of waiting time included.</p>
+          <ul class="pk-menu"><li>Mediterranean sandwich</li><li>Beef burrito</li><li>Tuna Ni&ccedil;oise sandwich</li><li>Lebanese fattoush salad</li><li>Charcuterie cured meat</li><li>Fresh fruit &amp; crackers</li><li>Beverage</li></ul>
+          <div class="price"><span class="price-label">Special price &middot; for two &middot; tax &amp; service included</span><strong>IDR 20,000,000</strong></div>
+        </div>
+      </div>
+    </div>
+    <p class="pk-note">Add a picnic to any tour that flies above the location, or to a custom route on request. The landing fee and one hour of waiting time are included in each price.</p>
   </div>
 </section>
 
